@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$coolguys-app-primary: mat-palette($mat-green, A400);
+$coolguys-app-accent:  mat-palette($mat-grey, 200);
+$coolguys-app-warn:    mat-palette($mat-red);
+
+$coolguys-app-theme: mat-light-theme($coolguys-app-primary, $coolguys-app-accent, $coolguys-app-warn);
+
+@include angular-material-theme($coolguys-app-theme);
+.mat-app-background {
+  background-color: #24292e!important;
+}

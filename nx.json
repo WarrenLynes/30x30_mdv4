@@ -10,5 +10,19 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "inventory": {
+      "tags": []
+    },
+    "inventory-e2e": {
+      "tags": [],
+      "implicitDependencies": ["inventory"]
+    },
+    "material": {
+      "tags": []
+    },
+    "core-data": {
+      "tags": []
+    }
+  }
 }

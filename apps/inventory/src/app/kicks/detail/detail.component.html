@@ -1,0 +1,12 @@
+<form (submit)="onSubmit()" [formGroup]="detailForm">
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Title" formControlName="title" type="text" name="title" required>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <textarea matInput placeholder="Details" formControlName="details" type="text" name="details" required></textarea>
+  </mat-form-field>
+
+  <button type="submit" mat-button color="primary" [disabled]="!detailForm.valid">Save</button>
+  <button type="button" mat-button (click)="onCancel()">Cancel</button>
+</form>

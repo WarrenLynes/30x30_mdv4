@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div class="col-50">
+    <mdv4-list
+      [data]="shoes$ | async"
+      [selected]="selectedShoe$ | async"
+      (selectt)="selectShoe($event)"
+      (delete)="deleteShoe($event)"
+    ></mdv4-list>
+  </div>
+
+  <div class="col-50">
+    <mdv4-detail
+      [selected]="selectedShoe$ | async"
+      (saved)="saveShoe($event)"
+      (cancelled)="cancel()">
+      ></mdv4-detail>
+  </div>
+
+</div>
